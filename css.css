@@ -844,7 +844,8 @@ ul.tabs li a .tab-text{
     .nav-menu{
         flex-direction: column;
         background-color: rgb(255, 255, 255);
-        position: fixed;
+        /* position: fixed; */
+        position: absolute;
         left: 0;
         top: 7.5%;
         width: 100%;
