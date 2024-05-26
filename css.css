@@ -912,7 +912,7 @@ ul.tabs li a .tab-text{
 	}
 }
 
-@media screen and (max-width: 450px){
+@media screen and (max-width: 600px){
 	ul.tabs li a{
 		padding: 15px 0px;
 	}
@@ -924,4 +924,19 @@ ul.tabs li a .tab-text{
 	.secciones article{
 		padding: 20px;
 	}
+    #experience-progressBar-container li{
+        list-style: none;
+        float: left;
+        width: 16%;
+        text-align: center;
+        color: var(--white);
+        text-transform: uppercase;
+        font-size: 0.6rem;
+        cursor: pointer;
+        font-weight: 600;
+        transition: all ease .2s;
+        vertical-align: bottom;
+        height: 60px;
+        position: relative;
+    }
 }
