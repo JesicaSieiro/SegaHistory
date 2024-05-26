@@ -1,0 +1,927 @@
+body {
+    /* font-family: Arial, sans-serif; */
+    font-family: "Open Sans", sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(27, 51, 96);
+    color: #ffffff;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgb(27, 51, 96);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* margin-top: 30px; */
+}
+h1{
+    text-align: center;
+    font-size: 34px;
+}
+h1, h2, h3 {
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+.section {
+    /* display:flex;
+    justify-content: space-around; */
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+/* .contenedor {
+    overflow: hidden;
+    position: fixed; 
+    top: -25px;
+    width: 100%; 
+    background-color: rgb(255, 255, 255);
+}
+
+.contenedor>li {
+    color: rgb(23, 146, 250);
+    padding: 20px;
+    font-size: 20px;
+    min-width: 150px;
+    display: inline;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(23, 146, 250);
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+}
+
+.contenedor a:hover {
+    background: rgb(255, 255, 255);
+    color: rgb(20, 39, 73);
+  } */
+
+  /*ETIQUETAS ESTRUCTURALES*/
+  /*NAV*/
+  @font-face {
+    font-family: 'SEGA';
+    src: url('./sega/SEGA.TTF');
+    font-style: normal;
+    font-weight: normal;
+  }
+header{
+   
+    border-bottom: rgb(23, 146, 250) solid 4px;
+    padding:20px 0;
+    z-index: 100;
+    top: -25px;
+    width: 100%; 
+    background-color: rgb(255, 255, 255);
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20PX;
+}
+/*CLASES*/
+/*NAV*/
+.nav-link{
+    color:rgb(23, 146, 250);
+    text-decoration: none;
+}
+.logo{
+    font-size: 60px;
+    align-items: center;
+    font-family: 'SEGA';
+    color: #17569b ;
+}
+.nav-menu{
+    display: flex;
+    list-style: none;
+}
+.nav-menu-item{
+    font-size: 24px;
+    padding: 0 20px;
+    text-transform: uppercase;
+    align-content: center;
+    width: max-content;
+}
+.nav-menu-item:hover,
+.nav-menu-link-active{
+    border-bottom: 2px solid rgb(23, 146, 250);
+    text-shadow: 0 0 10px rgb(187, 220, 248);
+}
+.nav-toggle{
+    color:rgb(23, 146, 250);
+    background: none;
+    font-size: 30px;
+    border: none;
+    align-content: center; 
+    cursor:pointer;
+    display: none;
+
+}
+
+/* HISTORIA */
+:root {
+    /* --red: #f45b69; */
+    /* --dark-blue: #227c9d; */
+    --turquoise: rgb(23, 146, 250);
+    --white: #fff;
+  }
+.timeline {
+    padding: 50px 20px;
+    margin: 0 auto;
+    max-width: 1500px;
+    height: 600px;
+    color: var(--turquoise);
+    border:#fff solid 4px;
+    border-radius: 6px;
+    overflow-y: scroll;
+  }
+  
+  .timeline ol {
+    position: relative;
+    list-style: none;
+  }
+  
+  .timeline ol::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: var(--turquoise);
+  }
+  
+  .timeline ol li .item-inner {
+    padding: 20px 180px;
+    margin-bottom: 8vh;
+  }
+  
+  .timeline ol li .time-wrapper {
+    position: relative;
+    font-size: 4.5rem;
+    font-weight: bold;
+    line-height: 0.9;
+  }
+  
+  .timeline ol li .time-wrapper::before,
+  .timeline ol li .time-wrapper::after {
+    content: "";
+    position: absolute;
+    background: var(--turquoise);
+  }
+  
+  .timeline ol li .time-wrapper::before {
+    top: 50%;
+    left: -180px;
+    transform: translateY(-50%);
+    width: 0;
+    height: 3px;
+    transition: width 0.8s linear;
+  }
+  
+  .timeline ol li .time-wrapper::after {
+    top: calc(50% - 8px);
+    left: -60px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    transform: scale(0);
+    transform-origin: left center;
+    transition: all 0.4s linear;
+  }
+  
+  .timeline ol li time,
+  .timeline ol li .details > * {
+    opacity: 0;
+    transition: 0.5s;
+  }
+  
+  .timeline ol li time {
+    display: inline-block;
+    transform: translateY(-30px);
+  }
+  
+  .timeline ol li .details > * {
+    transform: translateY(30px);
+  }
+  
+  .timeline ol li .details h3 {
+    font-size: 2rem;
+    line-height: 1;
+    margin: 15px 0;
+  }
+  
+  /* ANIMATION STYLES
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  
+  .timeline ol li.in-view .time-wrapper::before {
+    width: 120px;
+  }
+  
+  .timeline ol li.in-view .time-wrapper::after {
+    transition-delay: 0.8s;
+    transform: scale(1.5);
+  }
+  
+  .timeline ol li.in-view time,
+  .timeline ol li.in-view .details > * {
+    opacity: 1;
+    transform: none;
+  }
+  
+  .timeline ol li.in-view time {
+    transition-delay: 1.3s;
+  }
+  
+  .timeline ol li.in-view .details h3 {
+    transition-delay: 1.5s;
+  }
+  
+  .timeline ol li.in-view .details p {
+    transition-delay: 1.7s;
+    color: var(--white);
+  }
+
+
+/*CARD CIRCULAR*/
+.content-circle-card{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.circle-card {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    width: 650px;
+    text-align: center;
+    margin-top: 100px;
+}
+.circle-card-img {
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+    border-radius: 100%;
+    margin: -60px auto 0;
+}
+.circle-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.circle-card-info {
+    
+    padding: 0 20px 20px 20px;
+    height: 100px;
+    /* text-align: start; */
+}
+.circle-card-infoTwo {
+    padding:0 40px;
+    text-align: start;
+    height: 275px;
+    overflow-y: scroll;
+}
+/*CONSOLAS*/
+
+#experience-progressBar-container{
+    position: relative;
+    width: 90%;
+    margin: auto;
+    height: 100px;
+    margin-top: 5rem;
+}
+#experience-progressBar-container ul{
+    padding: 0;
+    margin: 0;
+    padding-top: 15px;
+    /* z-index: 9999; */
+    position: absolute;
+    width: 100%;
+    /* margin-top: -40px; */
+}
+/* #experience-progressBar-container li:before{
+    content: "";
+    display: block;
+    margin: auto;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: solid 2px var(--shadow-color);
+    transition: all ease 0.3s;
+} */
+#experience-progressBar-container li.active:before,
+#experience-progressBar-container li:hover:before{
+    background: var(--turquoise);
+}
+#experience-progressBar-container li{
+    list-style: none;
+    float: left;
+    width: 16%;
+    text-align: center;
+    color: var(--white);
+    text-transform: uppercase;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all ease .2s;
+    vertical-align: bottom;
+    height: 60px;
+    position: relative;
+}
+
+#experience-progressBar-container li .step-inner{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    /* font-size: 14px; */
+    margin: -1rem auto;
+}
+
+#experience-progressBar-container li.active,
+#experience-progressBar-container li:hover{
+    color:var(--turquoise)
+}
+
+#experience-progressBar-container li:after{
+    content: "";
+    display: block;
+    width: 6px;
+    height: 6px;
+    background: var(--turquoise);
+    margin: 4rem auto;
+    /* border: solid 7px var(--shadow-color); */
+    border: solid 7px rgba(241, 238, 238, 0.7);
+    border-radius: 50%;
+    /* margin-top: 40px; */
+    margin-top: 7rem;
+    box-shadow: 0 2px 13px -1px var(--shadow-color);
+    transition: all ease .2s;
+}
+
+#experience-progressBar-containe li:hover:after {
+	background:#555;
+    /* background: var(--main-color); */
+}
+
+#experience-progressBar-container li.active:after{
+    background: var(--turquoise);
+    border-color: var(--turquoise);
+}
+#experience-progressBar-container #line{
+    width: 100%;
+    margin: -2rem auto;
+    /* background: var(--shadow-color); */
+    background: rgb(207 200 200 / 70%);
+    height: 6px;
+    position: absolute;
+    /* left: 10%; */
+    /* top: 57px; */
+    top: 10.5rem;
+    z-index: 1;
+    border-radius: 50px;
+    transition: all ease.9s;
+
+}
+
+#experience-progressBar-container #experience-line-process{
+    content: "";
+    width: 3%;
+    height: 100%;
+    background: var(--turquoise);
+    background: linear-gradient(to right,rgba(39, 4, 134, 0.836) 0%, var(--turquoise) 100%);
+    position: absolute;
+    z-index: 2;
+    border-radius: 50px;
+    transition: all ease.9s;
+}
+
+#experience-progress-content-section{
+    width: 80%;
+    /* margin: auto; */
+    margin: 7rem auto;
+    /* background: var(--white); */
+    border-radius: 2rem;
+    box-shadow: 0 .1rem .5rem var(--shadow-color);
+    border-color: var(--turquoise);
+}
+
+#experience-progress-content-section .experience-section-content{
+    padding: 30px 40px;
+    text-align: center;
+
+}
+#experience-progress-content-section .experience-section-content h2{
+    /* font-size:3rem; */
+	text-transform:uppercase;
+	color:var(--white);
+	letter-spacing:1px;
+}
+
+#experience-progress-content-section .experience-section-content p{
+    /* font-size:2rem; */
+	line-height:1.8em;
+	color:var(--white);
+}
+#experience-progress-content-section .experience-section-content h3,
+#experience-progress-content-section .experience-section-content ul{
+    /* font-size:2rem; */
+	/* line-height:1.8em;
+	color:var(--white); */
+    text-align: start;
+}
+#experience-progress-content-section .experience-section-content{
+    display:none;
+	animation: FadeInUp 700ms ease 1;
+	animation-fill-mode:forwards;
+	transform:translateY(15px);
+	opacity:0;
+}
+#experience-progress-content-section .experience-section-content.active{
+    display: block;
+}
+@keyframes FadeInUp {
+	0% {
+		transform:translateY(15px);
+		opacity:0;
+	}
+	
+	100% {
+		transform:translateY(0px);
+		opacity:1;
+	}
+}
+
+
+/* SOLAPAS */
+.wrap{
+	/* width: 90%; */
+	margin: 30px auto;
+    border: 2px solid;
+    border-radius: 10px;
+}
+
+ul.tabs{
+	list-style: none;
+	display: flex;
+    display: flex;
+    justify-content: space-evenly;
+	/* background: #f5f7f8; */
+    border-bottom: 2px solid;
+    overflow-x: auto;
+    padding: 0 10px;
+}
+
+
+ul.tabs li a{
+	/* color: #0984CC; */
+    color: var(--white);
+	text-decoration: none;
+	
+	text-align: center;
+
+	display: block;
+    padding: 20px 10px 5px;
+
+    font-size: 17px;
+    /* margin: 0 10px ; */
+    text-transform: uppercase;
+    align-content: center;
+    width: max-content;
+    /* border-right: 2px solid; */
+    margin-bottom: 25px;
+}
+
+.active-consola{
+    border-bottom: 4px solid rgb(23, 146, 250);
+    /*border-top: 4px solid rgb(23, 146, 250); */
+    text-shadow: 0 0 2px rgb(205 229 249);
+   /*  text-decoration: underline !important; */
+    color: rgb(23, 146, 250) !important;
+    font-size: 18px !important;
+}
+
+ul.tabs li a .tab-text{
+	margin-left: 8px;
+}
+
+.secciones{
+	width: 100%;
+	/* background: #fff; */
+    color:var(--white);
+}
+
+.secciones article{
+	padding: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    height: 600px;
+    overflow-y: auto;
+}
+.secciones article img{
+	padding: 30px;
+    width: 350px;
+    padding: 20px;
+    height: fit-content;
+}
+
+.secciones article div{
+	text-align: justify;
+    width: 60%;
+}
+/*CARD JUEGOS*/
+.games-content{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.card{
+    width: 400px;
+    margin: 20px;
+}
+.card-content{
+    position: relative;
+    padding: 17rem 5rem;
+    transform-style: preserve-3d;
+    transition: transform 3s;
+}
+.card:hover .card-content{
+    transform: rotateY(180deg);
+}
+.card-front-1, .card-front-2,.card-front-3 ,
+.card-front-4, .card-front-5,.card-front-6 ,.card-front-7,
+.card-front-8, .card-front-9,.card-front-10 ,
+.card-front-11, .card-front-12,.card-front-13 ,.card-front-14,
+.card-front-15,.card-front-16,.card-front-17,.card-front-18,
+.card-front-19,.card-front-20 ,.card-front-21,
+.card-front-22,.card-front-23 ,.card-front-24,
+.card-front-25,.card-front-26 ,.card-front-27,
+.card-front-28,.card-front-29 ,.card-front-30,
+.card-front-31,.card-front-32 ,.card-front-33,
+.card-front-34,.card-front-35 ,.card-front-36,
+.card-front-37,
+.card-front-38,.card-front-39 ,.card-front-40,
+.card-back{
+    position: absolute;
+    top:0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+}
+.card-front-1, .card-front-2,.card-front-3 ,
+.card-front-4, .card-front-5,.card-front-6 ,.card-front-7,
+.card-front-8, .card-front-9,.card-front-10 ,
+.card-front-11, .card-front-12,.card-front-13 ,.card-front-14,
+.card-front-15,
+.card-front-16,
+.card-front-17,
+.card-front-18, .card-front-19,.card-front-20 ,.card-front-21,
+.card-front-22,.card-front-23 ,.card-front-24,
+.card-front-25,.card-front-26 ,.card-front-27,
+.card-front-28,.card-front-29 ,.card-front-30,
+.card-front-31,.card-front-32 ,.card-front-33,
+.card-front-34,.card-front-35 ,.card-front-36,
+.card-front-37,
+.card-front-38,.card-front-39 ,.card-front-40,
+.card-back{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+    color: #fff;
+    background-color: rgba(34, 33, 31, 0.2);
+}
+/*SG-1000:*/
+.card-front-1{
+    background-image: url("./recursos/monaco2.jpg");
+    align-items: center;
+}
+.card-front-2{
+    background-image: url("./recursos/Galaga.jpg");
+    align-items: center;
+}
+.card-front-3{
+    background-image: url("./recursos/galaxyForce.png");
+    align-items: center;
+}
+.card-front-4{
+    background-image: url("./recursos/PenguinLand.png");
+    align-items: center;
+}
+.card-front-5{
+    background-image: url("./recursos/girlGarden.png");
+    align-items: center;
+}
+.card-front-6{
+    background-image: url("./recursos/Choplifer.png");
+    align-items: center;
+}
+.card-front-7{
+    background-image: url("./recursos/spaiceInvaders.png");
+    align-items: center;
+}
+/*Master System: */
+.card-front-8{
+    background-image: url("./recursos/AlexKidd.png");
+    align-items: center;
+}
+.card-front-9{
+    background-image: url("./recursos/Fantasy\ Zone.jpg");
+    align-items: center;
+}
+.card-front-10{
+    background-image: url("./recursos/phantasy_star.png");
+    align-items: center;
+}
+.card-front-11{
+    background-image: url("./recursos/Golden_Axe_Warrior.PNG");
+    align-items: center;
+}
+.card-front-12{
+    background-image: url("./recursos/california.jpg");
+    align-items: center;
+}
+.card-front-13{
+    background-image: url("./recursos/dolphin.png");
+    align-items: center;
+}
+.card-front-14{
+    background-image: url("./recursos/MortalKombat.jpg");
+    align-items: center;
+}
+/*Mega Drive*/
+.card-front-15{
+    background-image: url("./recursos/Sonic\ the\ Hedgehog.jpg");
+    align-items: center;
+}
+.card-front-16{
+    background-image: url("./recursos/streets-of-rage.png");
+    align-items: center;
+}
+.card-front-17{
+    background-image: url("./recursos/champions.png");
+    align-items: center;
+}
+.card-front-18{
+    background-image: url("./recursos/shinobi.jpg");
+    align-items: center;
+}
+.card-front-19{
+    background-image: url("./recursos/streets-of-rage-2.png");
+    align-items: center;
+}
+.card-front-20{
+    background-image: url("./recursos/Castlevania\ Bloodlines.jpg");
+    align-items: center;
+}
+.card-front-21{
+    background-image: url("./recursos/Monster\ World\ IV..jpg");
+    align-items: center;
+}
+/*GAME GEAR*/
+.card-front-22{
+    background-image: url("./recursos/Columns.jpg");
+    align-items: center;
+}
+.card-front-23{
+    background-image: url("./recursos/Sonic\ Chaos.jpg");
+    align-items: center;
+}
+.card-front-24{
+    background-image: url("./recursos/Defenders\ of\ Oasis.jpg");
+    align-items: center;
+}
+.card-front-25{
+    background-image: url("./recursos/MickeyMouse.png");
+    align-items: center;
+}
+.card-front-26{
+    background-image: url("./recursos/megaMan.jpg");
+    align-items: center;
+}
+.card-front-27{
+    background-image: url("./recursos/Master_of_Darkness_Coverart.png");
+    align-items: center;
+}
+/*MEGA-CD*/
+.card-front-28{
+    background-image: url("./recursos/Sonic\ CD.jpg");
+    align-items: center;
+}
+.card-front-29{
+    background-image: url("./recursos/Final\ Fight.jpg");
+    align-items: center;
+}
+.card-front-30{
+    background-image: url("./recursos/Shining\ Force\ CD.jpg");
+    align-items: center;
+}
+.card-front-31{
+    background-image: url("./recursos/The\ Terminator.jpg");
+    align-items: center;
+}
+.card-front-32{
+    background-image: url("./recursos/Night\ Trap.jpg");
+    align-items: center;
+}
+/*SEGA 32X*/
+.card-front-33{
+    background-image: url("./recursos/Virtua\ Fighter.jpg");
+    align-items: center;
+}
+.card-front-34{
+    background-image: url("./recursos/SEGA\ AGES\ Virtua\ Racing.jpg");
+    align-items: center;
+}
+.card-front-35{
+    background-image: url("./recursos/Star\ Wars\ Arcade.jpg");
+    align-items: center;
+}
+.card-front-36{
+    background-image: url("./recursos/Stellar\ Assault.jpg");
+    align-items: center;
+}
+.card-front-37{
+    background-image: url("./recursos/Mortal\ Kombat\ II.jpg");
+    align-items: center;
+}
+.card-front-38{
+    background-image: url("./recursos/doom.jpg");
+    align-items: center;
+}
+.card-front-39{
+    background-image: url("./recursos/Doom\,\ Blackthorne.jpg");
+    align-items: center;
+}
+.card-front-40{
+    background-image: url("./recursos/Primal\ Rage.jpg");
+    align-items: center;
+}
+/*fin imagenes*/
+.card-back{
+    /* background-image: url(""); */
+    background-color: #242323;
+    transform: rotateY(180deg) translateZ(2rem);
+    gap:0.5rem;
+    overflow-y: scroll;
+    align-items: center;
+    justify-content: center;
+}
+.card-front-1::before,
+.card-front-2::before,
+.card-front-3::before,
+.card-front-4::before, .card-front-5::before,.card-front-6::before ,.card-front-7::before,
+.card-front-8::before, .card-front-9::before,.card-front-10::before ,
+.card-front-11::before, .card-front-12::before,.card-front-13::before ,.card-front-14::before,
+.card-front-15::before,
+.card-front-16::before,
+.card-front-17::before,
+.card-front-18::before, .card-front-19::before,.card-front-20::before ,.card-front-21::before,
+.card-front-22::before,.card-front-23::before ,.card-front-24::before,
+.card-front-25::before,.card-front-26::before ,.card-front-27::before,
+.card-front-28::before,.card-front-29::before ,.card-front-30::before,
+.card-front-31::before,.card-front-32::before ,.card-front-33::before,
+.card-front-34::before,.card-front-35::before ,.card-front-36::before,
+.card-front-37::before,
+.card-front-38::before,.card-front-39::before ,.card-front-40::before
+{
+    content: "";
+    position: absolute;
+    inset: 1rem;
+    border:3px solid #fff;
+    transform: translateZ(2rem);
+}
+.title{
+    text-transform: uppercase;
+    line-height: 120%;
+    transform: translateZ(4.4rem);
+    font-size: 4.5rem;
+}
+.back-title{
+    font-size: 2rem;
+}
+.sub-title{
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+.title, .back-title, .sub-title,.card-back,
+.descriotion{
+    filter:drop-shadow(0 0 20px #242323)
+}
+.back-txt{
+    /* font-size: 0.70rem; */
+    font-size: 1rem;
+    /* background-color: #0e0d0db5; */
+    width: fit-content;
+}
+@media only screen and /* (min-width:481px) and */ (max-width:768px){
+    header{
+        height: 8%;
+    }
+    .logo{
+        font-size: 32px;
+        
+    }
+    .nav-menu{
+        flex-direction: column;
+        background-color: rgb(255, 255, 255);
+        position: fixed;
+        left: 0;
+        top: 7.5%;
+        width: 100%;
+        align-items: center;
+        padding: 20px 0;
+        left:100%;
+        transition: left 0.3s;
+        z-index: 10;
+    }
+    .nav-menu-item{
+        font-size: 18px;
+        margin: 10px ;
+        text-transform: uppercase;
+        align-content: center;
+        justify-content: center;
+        width: max-content;
+    }
+    .nav-menu-item:hover,
+    .nav-menu-link-active{
+        border-bottom: none;
+        text-shadow: 0 0 10px rgb(187, 220, 248);
+    }
+    
+    .nav-toggle{
+        display: block;
+    }
+
+    .nav-menu-visible{
+        left:0;
+    }
+    /*HISTORIA*/
+    .timeline ol li .item-inner {
+        padding: 20px 40px;
+      }
+    
+      .timeline ol li .time-wrapper::before {
+        display: none;
+      }
+    
+      .timeline ol li .time-wrapper::after {
+        left: -45px;
+        transform-origin: center;
+      }
+    
+      .timeline ol li.in-view .time-wrapper::after {
+        transition-delay: 0s;
+      }
+    
+      .timeline ol li.in-view time {
+        transition-delay: 0.5s;
+      }
+    
+      .timeline ol li.in-view .details h3 {
+        transition-delay: 0.7s;
+      }
+    
+      .timeline ol li.in-view .details p {
+        transition-delay: 0.9s;
+      }
+    /*SOLAPAS*/
+    ul.tabs li{
+		width: none;
+		flex-basis: 0;
+		flex-grow: 1;
+	}
+}
+
+@media screen and (max-width: 450px){
+	ul.tabs li a{
+		padding: 15px 0px;
+	}
+
+	ul.tabs li a .tab-text{
+		display: none;
+	}
+
+	.secciones article{
+		padding: 20px;
+	}
+}
